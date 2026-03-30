@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhina J — Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="#home" class="logo">DJ<span class="logo-dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"          class="nav-link active">Home</a></li>
+      <li><a href="#about"         class="nav-link">About</a></li>
+      <li><a href="#projects"      class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certificates</a></li>
+      <li><a href="#contact"       class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mob-drawer" id="mobDrawer">
+    <a href="#home"          class="mob-link">Home</a>
+    <a href="#about"         class="mob-link">About</a>
+    <a href="#projects"      class="mob-link">Projects</a>
+    <a href="#certifications" class="mob-link">Certificates</a>
+    <a href="#contact"       class="mob-link">Contact</a>
+  </div>
+  <div class="mob-overlay" id="mobOverlay"></div>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="section-home">
+    <div class="hero-bg-a"></div>
+    <div class="hero-bg-b"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="home-wrap">
+      <!-- Text col -->
+      <div class="hero-text">
+        <!-- Badges removed as requested -->
+
+        <h1 class="hero-h1">
+          <span class="hl hl-1">CREATIVE</span>
+          <span class="hl hl-2">FRONTEND</span>
+          <span class="hl hl-3 grad-text">DEVELOPER</span>
+        </h1>
+
+        <p class="hero-name">— DHINA J</p>
+
+        <p class="hero-typed">
+          <span id="typedText" class="typed-span"></span><span class="bcur">_</span>
+        </p>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-fill">See My Work</a>
+          <a href="#contact"  class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hs-item"><span class="hs-num" data-target="5">0</span><span class="hs-lab">Projects</span></div>
+          <div class="hs-div"></div>
+          <div class="hs-item"><span class="hs-num" data-target="4">0</span><span class="hs-lab">Certifications</span></div>
+          <div class="hs-div"></div>
+          <div class="hs-item"><span class="hs-num" data-target="10">0</span><span class="hs-lab">Skills</span></div>
+        </div>
+      </div>
+
+      <!-- Avatar col — STATIC, no hover animation, no spin rings -->
+      <div class="hero-visual">
+        <div class="av-box">
+          <div class="av-frame">
+            <svg viewBox="0 0 300 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="man-svg">
+              <defs>
+                <linearGradient id="bgG"    x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a0a2e"/><stop offset="100%" stop-color="#2d1b69"/></linearGradient>
+                <linearGradient id="skinG"  x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5c6a0"/><stop offset="100%" stop-color="#e8a882"/></linearGradient>
+                <linearGradient id="shirtG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff6b35"/><stop offset="100%" stop-color="#cc4400"/></linearGradient>
+              </defs>
+              <rect width="300" height="380" fill="url(#bgG)"/>
+              <foreignObject x="0" y="0" width="300" height="380">
+                <img src="dd.png" alt="Avatar" style="width:100%;height:100%;object-fit:cover;border-radius:0;" />
+              </foreignObject>
+            </svg>
+          </div>
+          <!-- Static info tags — no float animation -->
+          <div class="av-tag av-top">
+            <span>💻</span>
+            <div><div class="avt-t">Frontend Dev</div><div class="avt-s">HTML · CSS · JS · React</div></div>
+          </div>
+          <div class="av-tag av-bot">
+            <span class="gdot"></span> Available for Hire
+          </div>
+          <!-- New responsive audio player -->
+          <div class="ds">
+            <div class="custom-audio-player" id="customAudioPlayer">
+              <button id="playPauseBtn" class="audio-btn" aria-label="Play/Pause">
+                <span id="playIcon">▶️</span>
+                <span id="pauseIcon" style="display:none;">⏸️</span>
+              </button>
+              <input type="range" id="audioSeek" class="audio-seek" value="0" min="0" max="100" step="1">
+              <span id="audioTime" class="audio-time">0:00 / 0:00</span>
+              <audio id="audioElem">
+                <source src="Yumabaibesa (mp3cut.net).mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div><!-- /home-wrap -->
+
+   <!---- <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+   .
+    </div> -->
+  </section>
+
+  <!-- ===== LAPTOP PARALLAX SECTION ===== -->
+  <div class="lp-section" id="lpSection">
+    <div class="lp-glow-bg"></div>
+
+    <div class="lp-heading reveal-up">
+      <span class="lp-sm">CRAFTING DIGITAL</span>
+      <span class="lp-lg">EXPERIENCES</span>
+    </div>
+
+    <div class="lp-stage">
+      <!-- This div is moved by JS on scroll -->
+      <div class="lp-laptop" id="lpLaptop">
+
+        <div class="lp-lid">
+          <div class="lp-screen">
+            <div class="lp-topbar">
+              <div class="lp-dots">
+                <span class="dr"></span><span class="dy"></span><span class="dg"></span>
+              </div>
+              <div class="lp-url-bar">dhina-j.dev</div>
+            </div>
+            <div class="lp-code-area">
+              <p class="lc"><span class="kw">const</span> <span class="fn">developer</span> = {</p>
+              <p class="lc in"><span class="ky">name</span>: <span class="sv">"Dhina J"</span>,</p>
+              <p class="lc in"><span class="ky">role</span>: <span class="sv">"Frontend Dev"</span>,</p>
+              <p class="lc in"><span class="ky">skills</span>: [<span class="sv">"React"</span>, <span class="sv">"JS"</span>],</p>
+              <p class="lc in"><span class="ky">open</span>: <span class="sv">true</span></p>
+              <p class="lc">};</p>
+              <p class="lc cm">// Let's build something 🚀</p>
+              <p class="lp-blink blink">█</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lp-base">
+          <div class="lp-kbd" id="lpKbd"></div>
+          <div class="lp-trackpad"></div>
+        </div>
+      </div>
+
+      <!-- Floating tech chips — CSS float animation kept as it's not on the man -->
+      <div class="lp-chip chip-1">React</div>
+      <div class="lp-chip chip-2">JS</div>
+      <div class="lp-chip chip-3">Python</div>
+      <div class="lp-chip chip-4">Figma</div>
+      <div class="lp-chip chip-5">CSS</div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-pad">
+    <div class="sec-head reveal-up">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">About <em>Me</em></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-img-col reveal-left">
+        <svg viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="about-man">
+          <defs>
+            <linearGradient id="ab1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d0d1f"/><stop offset="100%" stop-color="#1a0a2e"/></linearGradient>
+          </defs>
+          <rect width="260" height="320" rx="20" fill="url(#ab1)"/>
+          <circle cx="200" cy="50"  r="50" fill="rgba(255,107,53,0.1)"/>
+          <circle cx="40"  cy="260" r="60" fill="rgba(123,47,255,0.1)"/>
+          <ellipse cx="130" cy="280" rx="75" ry="55" fill="#ff6b35"/>
+          <path d="M105 220 L130 240 L155 220" fill="#ff8c5a"/>
+          <rect x="118" y="185" width="24" height="38" rx="8" fill="#f5c6a0"/>
+          <ellipse cx="130" cy="158" rx="52" ry="58" fill="#f5c6a0"/>
+          <ellipse cx="130" cy="108" rx="52" ry="24" fill="#1a0a00"/>
+          <rect x="78"  y="96" width="18" height="45" rx="9" fill="#1a0a00"/>
+          <rect x="164" y="96" width="18" height="45" rx="9" fill="#1a0a00"/>
+          <ellipse cx="78"  cy="158" rx="10" ry="13" fill="#e8a882"/>
+          <ellipse cx="182" cy="158" rx="10" ry="13" fill="#e8a882"/>
+          <ellipse cx="112" cy="154" rx="10" ry="12" fill="white"/>
+          <ellipse cx="148" cy="154" rx="10" ry="12" fill="white"/>
+          <circle cx="113" cy="156" r="6"   fill="#2d1b69"/>
+          <circle cx="149" cy="156" r="6"   fill="#2d1b69"/>
+          <circle cx="115" cy="154" r="2.5" fill="black"/>
+          <circle cx="151" cy="154" r="2.5" fill="black"/>
+          <circle cx="116" cy="153" r="1.2" fill="white"/>
+          <circle cx="152" cy="153" r="1.2" fill="white"/>
+          <path d="M100 140 Q112 133 124 140" stroke="#5a3a1a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M136 140 Q148 133 160 140" stroke="#5a3a1a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M125 166 Q130 178 135 166" stroke="#c48a6a" stroke-width="1.8" fill="none"/>
+          <path d="M114 192 Q130 205 146 192" stroke="#c48a6a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <rect x="98"  y="145" width="30" height="20" rx="8" stroke="#ff6b35" stroke-width="2" fill="rgba(255,107,53,0.08)"/>
+          <rect x="132" y="145" width="30" height="20" rx="8" stroke="#ff6b35" stroke-width="2" fill="rgba(255,107,53,0.08)"/>
+          <line x1="128" y1="155" x2="132" y2="155" stroke="#ff6b35" stroke-width="2"/>
+        </svg>
+        <div class="ab-badge">🎨 UI / UX Designer</div>
+      </div>
+
+      <div class="about-text-col reveal-right">
+        <p class="ab-intro">Hi! I'm <strong>Dhina J</strong> — a passionate frontend developer and UI/UX designer who loves turning ideas into beautiful digital experiences.</p>
+        <p class="ab-body">My journey blends design thinking with clean, efficient code. I craft responsive interfaces using modern web technologies and Figma. I'm also exploring AI, Python, and databases to grow as a full-stack developer.</p>
+
+        <div class="info-grid">
+         
+         <!---- <div class="info-c"><span class="info-ic">📧</span><div><div class="info-l">Email</div><div class="info-v">onlydhina7@gmail.com</div></div></div>
+          <div class="info-c"><span class="info-ic">💼</span><div><div class="info-l">LinkedIn</div><div class="info-v">Dhina J</div></div></div>
+          <div class="info-c"><span class="info-ic">✅</span><div><div class="info-l">Status</div><div class="info-v green-v">Available ✓</div></div></div> -->
+        </div>
+
+        <h3 class="skills-h">Skills</h3>
+        <div class="skills-chips">
+          <span class="sc">🎨 Figma</span><span class="sc">🌐 HTML</span>
+          <span class="sc">💅 CSS</span><span class="sc">⚡ JavaScript</span>
+          <span class="sc">⚛️ React</span><span class="sc">🍃 MongoDB</span>
+          <span class="sc">🐍 Python</span><span class="sc">🎬 Video Editing</span>
+          <span class="sc">🖌️ Canva</span><span class="sc">🗄️ SQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section-pad">
+    <div class="sec-head reveal-up">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">My <em>Projects</em></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="pcard reveal-up" style="--d:0s">
+        <div class="pimg-box">
+          <svg viewBox="0 0 400 220" class="psvg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#0f0520"/>
+            <circle cx="340" cy="30"  r="80" fill="rgba(123,47,255,0.12)"/>
+            <circle cx="60"  cy="190" r="60" fill="rgba(255,107,53,0.08)"/>
+            <rect x="30" y="25" width="340" height="170" rx="8"  fill="#0a0a18" stroke="rgba(123,47,255,0.35)" stroke-width="1.5"/>
+            <rect x="30" y="25" width="340" height="30"  rx="8"  fill="#110d24"/>
+            <rect x="30" y="43" width="340" height="12"        fill="#110d24"/>
+            <circle cx="50" cy="40" r="5" fill="#ff5f57"/>
+            <circle cx="67" cy="40" r="5" fill="#ffbd2e"/>
+            <circle cx="84" cy="40" r="5" fill="#28c840"/>
+            <rect x="100" y="32" width="180" height="16" rx="4" fill="rgba(255,255,255,0.05)"/>
+            <text x="190" y="44" fill="rgba(255,255,255,0.25)" font-size="9" text-anchor="middle" font-family="monospace">college.edu.in</text>
+            <rect x="38"  y="58"  width="324" height="20" rx="3"  fill="#1a1030"/>
+            <rect x="46"  y="63"  width="30"  height="8"  rx="2"  fill="rgba(123,47,255,0.6)"/>
+            <rect x="82"  y="63"  width="30"  height="8"  rx="2"  fill="rgba(255,255,255,0.15)"/>
+            <rect x="118" y="63"  width="30"  height="8"  rx="2"  fill="rgba(255,255,255,0.15)"/>
+            <rect x="310" y="61"  width="44"  height="12" rx="4"  fill="rgba(123,47,255,0.7)"/>
+            <rect x="38"  y="82"  width="180" height="14" rx="3"  fill="rgba(123,47,255,0.55)"/>
+            <rect x="38"  y="102" width="130" height="8"  rx="2"  fill="rgba(255,255,255,0.2)"/>
+            <rect x="38"  y="116" width="110" height="8"  rx="2"  fill="rgba(255,255,255,0.12)"/>
+            <rect x="38"  y="148" width="90"  height="28" rx="6"  fill="rgba(123,47,255,0.75)"/>
+            <text x="83"  y="167" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Explore</text>
+            <rect x="230" y="60"  width="72"  height="125" rx="10" fill="#0d0820" stroke="rgba(123,47,255,0.45)" stroke-width="1.5"/>
+            <rect x="237" y="72"  width="58"  height="92"  rx="4"  fill="#1a1030"/>
+            <rect x="243" y="78"  width="44"  height="8"   rx="2"  fill="rgba(123,47,255,0.6)"/>
+            <rect x="243" y="92"  width="32"  height="5"   rx="1.5" fill="rgba(255,255,255,0.2)"/>
+            <rect x="243" y="115" width="44"  height="24"  rx="4"  fill="rgba(123,47,255,0.4)"/>
+          </svg>
+          <div class="pover"><span>View Project →</span></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="pt">Figma</span><span class="pt">UI/UX</span><span class="pt">Mobile</span></div>
+          <h3 class="ptitle">College Website &amp; App</h3>
+          <p class="pdesc">Full UI/UX design for college web and mobile app — modern layouts, navigation flows, and responsive components.</p>
+        </div>
+      </div>
+
+      <div class="pcard reveal-up" style="--d:0.08s">
+        <div class="pimg-box">
+          <svg viewBox="0 0 400 220" class="psvg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#110a00"/>
+            <ellipse cx="200" cy="110" rx="130" ry="90" fill="rgba(255,107,53,0.07)"/>
+            <rect x="25"  y="20"  width="100" height="82" rx="8" fill="#1c1000" stroke="rgba(255,107,53,0.3)" stroke-width="1"/>
+            <rect x="32"  y="27"  width="44"  height="33" rx="4" fill="rgba(255,107,53,0.2)"/>
+            <ellipse cx="54" cy="43" rx="14" ry="9" fill="rgba(255,107,53,0.45)"/>
+            <rect x="80"  y="27"  width="38"  height="33" rx="4" fill="rgba(123,47,255,0.2)"/>
+            <circle cx="99" cy="43" r="11" fill="rgba(123,47,255,0.45)"/>
+            <rect x="32"  y="64"  width="86"  height="28" rx="4" fill="rgba(0,212,255,0.1)"/>
+            <text x="75"  y="82"  fill="rgba(0,212,255,0.6)" font-size="9" text-anchor="middle" font-family="monospace">preview</text>
+            <rect x="25"  y="115" width="350" height="36" rx="8" fill="#1c1000" stroke="rgba(255,107,53,0.4)" stroke-width="1.5"/>
+            <text x="195" y="138" fill="rgba(255,255,255,0.3)" font-size="9" text-anchor="middle" font-family="monospace">Generate: sunset over mountains...</text>
+            <rect x="345" y="119" width="24"  height="28" rx="5" fill="#ff6b35"/>
+            <text x="357" y="138" fill="white" font-size="12" text-anchor="middle">→</text>
+            <rect x="140" y="20"  width="115" height="82" rx="8" fill="#1c1000" stroke="rgba(255,107,53,0.25)" stroke-width="1"/>
+            <circle cx="197" cy="61" r="26" fill="rgba(255,107,53,0.13)"/>
+            <ellipse cx="197" cy="61" rx="16" ry="22" fill="rgba(255,107,53,0.35)"/>
+            <rect x="265" y="20"  width="110" height="82" rx="8" fill="#1c1000" stroke="rgba(123,47,255,0.25)" stroke-width="1"/>
+            <circle cx="320" cy="56" r="20" fill="rgba(123,47,255,0.38)"/>
+            <circle cx="320" cy="48" r="9"  fill="rgba(123,47,255,0.6)"/>
+            <rect x="148" y="162" width="104" height="34" rx="8" fill="rgba(255,107,53,0.13)" stroke="rgba(255,107,53,0.3)" stroke-width="1.5"/>
+            <text x="200" y="184" fill="#ff6b35" font-size="12" text-anchor="middle" font-family="sans-serif" font-weight="bold">🤖 AI Generator</text>
+          </svg>
+          <div class="pover"><span>View Project →</span></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="pt">HTML</span><span class="pt">CSS</span><span class="pt">JavaScript</span></div>
+          <h3 class="ptitle">AI Image Generator</h3>
+          <p class="pdesc">Web app generating AI-powered images with real-time output, gallery display, and a sleek modern interface.</p>
+        </div>
+      </div>
+
+      <div class="pcard reveal-up" style="--d:0.16s">
+        <div class="pimg-box">
+          <svg viewBox="0 0 400 220" class="psvg" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#001433"/><stop offset="100%" stop-color="#003d99"/></linearGradient></defs>
+            <rect width="400" height="220" fill="url(#skyG)"/>
+            <circle cx="42"  cy="22"  r="1.5" fill="white" opacity="0.9"/>
+            <circle cx="190" cy="16"  r="1.5" fill="white" opacity="0.8"/>
+            <circle cx="370" cy="12"  r="1.5" fill="white" opacity="0.9"/>
+            <circle cx="320" cy="52"  r="28"  fill="rgba(255,200,50,0.18)"/>
+            <circle cx="320" cy="52"  r="18"  fill="rgba(255,200,50,0.32)"/>
+            <circle cx="320" cy="52"  r="11"  fill="#ffd700"/>
+            <ellipse cx="85" cy="72"  rx="52" ry="20" fill="rgba(255,255,255,0.09)"/>
+            <rect x="22"  y="98"  width="165" height="104" rx="12" fill="rgba(0,0,0,0.4)"  stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+            <text x="54"  y="120" fill="rgba(255,255,255,0.55)" font-size="9"  font-family="sans-serif">Chennai, India</text>
+            <text x="54"  y="155" fill="white" font-size="30" font-family="sans-serif" font-weight="bold">28°C</text>
+            <text x="54"  y="174" fill="rgba(255,255,255,0.45)" font-size="9" font-family="sans-serif">Partly Cloudy · 12 km/h</text>
+            <rect x="200" y="98"  width="54" height="104" rx="10" fill="rgba(0,0,0,0.35)"   stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+            <text x="227" y="122" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle" font-family="sans-serif">Mon</text>
+            <text x="227" y="148" fill="white" font-size="16" text-anchor="middle">🌤️</text>
+            <text x="227" y="172" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">26°</text>
+            <rect x="260" y="98"  width="54" height="104" rx="10" fill="rgba(0,212,255,0.13)" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
+            <text x="287" y="122" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle" font-family="sans-serif">Tue</text>
+            <text x="287" y="148" fill="white" font-size="16" text-anchor="middle">🌧️</text>
+            <text x="287" y="172" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">22°</text>
+            <rect x="320" y="98"  width="54" height="104" rx="10" fill="rgba(0,0,0,0.35)"   stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+            <text x="347" y="122" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle" font-family="sans-serif">Wed</text>
+            <text x="347" y="148" fill="white" font-size="16" text-anchor="middle">☀️</text>
+            <text x="347" y="172" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">30°</text>
+          </svg>
+          <div class="pover"><span>View Project →</span></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="pt">HTML</span><span class="pt">CSS</span><span class="pt">JavaScript</span></div>
+          <h3 class="ptitle">Weather Website</h3>
+          <p class="pdesc">Live weather dashboard with location-based forecasts, animated icons, and clean API data presentation.</p>
+        </div>
+      </div>
+
+      <div class="pcard reveal-up" style="--d:0.24s">
+        <div class="pimg-box">
+          <svg viewBox="0 0 400 220" class="psvg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#001a00"/>
+            <circle cx="340" cy="40" r="70" fill="rgba(0,255,128,0.05)"/>
+            <rect x="18"  y="18"  width="82"  height="184" rx="8" fill="#0d1a0d" stroke="rgba(0,255,128,0.15)" stroke-width="1"/>
+            <rect x="26"  y="32"  width="60"  height="6"  rx="3" fill="rgba(0,255,128,0.55)"/>
+            <rect x="26"  y="46"  width="42"  height="5"  rx="2" fill="rgba(255,255,255,0.2)"/>
+            <rect x="26"  y="88"  width="64"  height="22" rx="4" fill="rgba(0,255,128,0.1)"  stroke="rgba(0,255,128,0.2)" stroke-width="1"/>
+            <rect x="26"  y="116" width="64"  height="22" rx="4" fill="rgba(0,255,128,0.18)" stroke="rgba(0,255,128,0.35)" stroke-width="1"/>
+            <rect x="108" y="18"  width="274" height="184" rx="8" fill="#0a150a" stroke="rgba(0,255,128,0.1)" stroke-width="1"/>
+            <rect x="120" y="28"  width="250" height="46" rx="6" fill="#0d1a0d" stroke="rgba(0,255,128,0.2)" stroke-width="1"/>
+            <circle cx="138" cy="51" r="16" fill="rgba(0,255,128,0.12)" stroke="rgba(0,255,128,0.3)" stroke-width="1"/>
+            <rect x="162" y="40"  width="94"  height="8"  rx="3" fill="rgba(0,255,128,0.5)"/>
+            <rect x="162" y="54"  width="60"  height="5"  rx="2" fill="rgba(255,255,255,0.2)"/>
+            <rect x="120" y="82"  width="114" height="62" rx="6" fill="#0d1a0d" stroke="rgba(0,255,128,0.15)" stroke-width="1"/>
+            <rect x="130" y="90"  width="60"  height="6"  rx="2" fill="rgba(0,255,128,0.45)"/>
+            <rect x="130" y="103" width="40"  height="5"  rx="2" fill="rgba(255,255,255,0.15)"/>
+            <rect x="242" y="82"  width="114" height="62" rx="6" fill="#0d1a0d" stroke="rgba(0,255,128,0.15)" stroke-width="1"/>
+            <rect x="252" y="90"  width="52"  height="6"  rx="2" fill="rgba(0,255,128,0.45)"/>
+            <rect x="120" y="156" width="120" height="36" rx="4" stroke="#00d4ff" stroke-width="1.5" stroke-dasharray="4 2" fill="rgba(0,212,255,0.05)"/>
+            <text x="180" y="200" fill="rgba(0,212,255,0.55)" font-size="8" text-anchor="middle" font-family="monospace">W:120 H:36</text>
+          </svg>
+          <div class="pover"><span>View Project →</span></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="pt">Figma</span><span class="pt">Design</span><span class="pt">Prototype</span></div>
+          <h3 class="ptitle">Portfolio Design</h3>
+          <p class="pdesc">Personal portfolio concept in Figma — custom components, smooth interactions, and a full design system.</p>
+        </div>
+      </div>
+
+      <div class="pcard reveal-up" style="--d:0.32s">
+        <div class="pimg-box">
+          <svg viewBox="0 0 400 220" class="psvg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="220" fill="#120012"/>
+            <circle cx="320" cy="40" r="70" fill="rgba(180,0,255,0.06)"/>
+            <rect x="20"  y="14"  width="360" height="192" rx="10" fill="#0d000d"  stroke="rgba(180,0,255,0.3)" stroke-width="1.5"/>
+            <rect x="20"  y="14"  width="360" height="32"  rx="10" fill="#1a0020"/>
+            <rect x="20"  y="34"  width="360" height="12"        fill="#1a0020"/>
+            <circle cx="44" cy="30" r="6" fill="#ff5f57"/>
+            <circle cx="62" cy="30" r="6" fill="#ffbd2e"/>
+            <circle cx="80" cy="30" r="6" fill="#28c840"/>
+            <text x="200" y="34" fill="rgba(255,255,255,0.25)" font-size="10" text-anchor="middle" font-family="monospace">todo_list.py</text>
+            <text x="38"  y="66"  fill="rgba(180,0,255,0.9)"  font-size="10" font-family="monospace">tasks = []</text>
+            <text x="38"  y="84"  fill="rgba(100,149,237,0.9)" font-size="10" font-family="monospace">def <tspan fill="rgba(255,215,0,0.9)">add_task</tspan>(t):</text>
+            <text x="52"  y="100" fill="rgba(255,255,255,0.7)" font-size="10" font-family="monospace">tasks.append(</text>
+            <text x="66"  y="116" fill="rgba(255,107,53,0.8)"  font-size="10" font-family="monospace">{"title":t})</text>
+            <text x="38"  y="136" fill="rgba(180,0,255,0.9)"   font-size="10" font-family="monospace">def <tspan fill="rgba(255,215,0,0.9)">show</tspan>():</text>
+            <text x="52"  y="152" fill="rgba(255,255,255,0.7)" font-size="10" font-family="monospace">for t in tasks:</text>
+            <text x="66"  y="168" fill="rgba(0,212,255,0.7)"   font-size="10" font-family="monospace">print(t)</text>
+            <text x="38"  y="186" fill="rgba(180,0,255,0.9)"   font-size="10" font-family="monospace">█</text>
+            <rect x="232" y="52"  width="132" height="150" rx="8" fill="rgba(180,0,255,0.07)" stroke="rgba(180,0,255,0.22)" stroke-width="1"/>
+            <text x="298" y="74"  fill="rgba(180,0,255,0.85)" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="bold">My Tasks</text>
+            <rect x="242" y="82"  width="9" height="9" rx="2" fill="#28c840"/>
+            <text x="257" y="92"  fill="rgba(255,255,255,0.45)" font-size="8.5" font-family="sans-serif" text-decoration="line-through">Buy groceries</text>
+            <rect x="242" y="100" width="9" height="9" rx="2" fill="#28c840"/>
+            <text x="257" y="110" fill="rgba(255,255,255,0.45)" font-size="8.5" font-family="sans-serif" text-decoration="line-through">Study Python</text>
+            <rect x="242" y="118" width="9" height="9" rx="2" stroke="rgba(180,0,255,0.6)" stroke-width="1.5" fill="transparent"/>
+            <text x="257" y="128" fill="rgba(255,255,255,0.85)" font-size="8.5" font-family="sans-serif">Build portfolio</text>
+            <rect x="242" y="136" width="9" height="9" rx="2" stroke="rgba(180,0,255,0.6)" stroke-width="1.5" fill="transparent"/>
+            <text x="257" y="146" fill="rgba(255,255,255,0.85)" font-size="8.5" font-family="sans-serif">Learn React</text>
+            <rect x="242" y="176" width="112" height="16" rx="5" fill="rgba(180,0,255,0.3)"/>
+            <text x="298" y="188" fill="white" font-size="8" text-anchor="middle" font-family="sans-serif">+ Add New Task</text>
+          </svg>
+          <div class="pover"><span>View Project →</span></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="pt">Python</span><span class="pt">CLI</span><span class="pt">Storage</span></div>
+          <h3 class="ptitle">To-Do List App</h3>
+          <p class="pdesc">Python task manager with add, edit, delete, and complete features plus persistent local file storage.</p>
+        </div>
+      </div>
+
+    </div><!-- /proj-grid -->
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section-pad">
+    <div class="sec-head reveal-up">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">My <em>Certificates</em></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="certs-grid">
+
+      <a href = "BCG.jpeg" target = "_blank">
+      <div class="ccard reveal-up" style="--d:0s">
+        <div class="cc-glow"></div>
+        <div class="cc-top"><span class="cc-icon">🤖</span><div class="cc-badge">Verified</div></div>
+        <div class="cc-name">Generative AI</div>
+        <div class="cc-issuer">BCG — </div>
+      
+         
+      </div>
+      </a>
+
+       <a href = "React.jpeg" target = "_blank">
+      <div class="ccard reveal-up" style="--d:0.08s">
+        <div class="cc-glow"></div>
+        <div class="cc-top"><span class="cc-icon">⚛️</span><div class="cc-badge">Verified</div></div>
+        <div class="cc-name">React JS</div>
+        <div class="cc-issuer">Great Learning</div>
+         
+      </div>
+    </a>
+
+    <a href = "SE.jpeg" target = "_blank">
+      <div class="ccard reveal-up" style="--d:0.16s">
+        <div class="cc-glow"></div>
+        <div class="cc-top"><span class="cc-icon">💻</span><div class="cc-badge">Verified</div></div>
+        <div class="cc-name">Software Engineering</div>
+        <div class="cc-issuer">Accenture</div>
+        
+      </div>
+
+    </a>
+
+    <a href = "UI UX.jpeg" target = "_blank">
+      <div class="ccard reveal-up" style="--d:0.24s">
+        <div class="cc-glow"></div>
+        <div class="cc-top"><span class="cc-icon">🎨</span><div class="cc-badge">Verified</div></div>
+        <div class="cc-name">UI &amp; UX Design</div>
+        <div class="cc-issuer">Mindluster</div>
+        
+      </div>
+
+    </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section-pad">
+    <div class="sec-head reveal-up">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Let's <em>Connect</em></h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="ct-left reveal-left">
+        <p class="ct-intro">Have a project in mind or just want to say hi? I'd love to hear from you. Let's build something amazing together.</p>
+        <div class="ct-links">
+          <a href="mailto:onlydhina7@gmail.com" class="ct-lnk"><span class="ctl-ic">📧</span><div><div class="ctl-l">Email</div><div class="ctl-v">onlydhina7@gmail.com</div></div></a>
+         
+          <a href="https://www.linkedin.com/in/dhina-j-6a766a292/"  class="ct-lnk"><span class="ctl-ic" target="_blank">💼</span><div><div class="ctl-l">LinkedIn</div><div class="ctl-v">Dhina J</div></div></a>
+        </div>
+      </div>
+      <div class="ct-right reveal-right">
+        <form id="contactForm" class="ct-form" name="contact" method="POST" netlify>
+          <div class="fg"><label>Your Name</label><input  type="text" name="name" placeholder="Dhina J"           required/></div>
+          <div class="fg"><label>Email</label>    <input  type="email" name="email" placeholder="dhina@example.com"  required/></div>
+          <div class="fg"><label>Message</label>  <textarea  name="message" rows="5"   placeholder="Tell me about your project..."></textarea></div>
+          <button type="submit" class="btn btn-fill fw">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="ft-inner">
+      <div class="ft-logo">DJ<span class="logo-dot">.</span></div>
+      <p class="ft-sub">Dhina J — Frontend Developer &amp; UI/UX Designer</p>
+      <nav class="ft-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="ft-copy">© 2025 Dhina J. Crafted with ❤️ and ☕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
