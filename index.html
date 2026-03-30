@@ -511,13 +511,24 @@
         </div>
       </div>
       <div class="ct-right reveal-right">
-        <form id="contactForm" class="ct-form" name="contact" method="POST"  data-netlify="true">
-           <input type="hidden" name="contact" value="contact">
-          <div class="fg"><label>Your Name</label><input  type="text" name="name" placeholder="Dhina J"           required/></div>
-          <div class="fg"><label>Email</label>    <input  type="email" name="email" placeholder="dhina@example.com"  required/></div>
-          <div class="fg"><label>Message</label>  <textarea  name="message" rows="5"   placeholder="Tell me about your project..."></textarea></div>
-          <button type="submit" class="btn btn-fill fw">Send Message →</button>
-        </form>
+       <form id="contactForm" class="ct-form" name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact">
+
+    <div class="fg">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="Dhina J" required />
+    </div>
+    <div class="fg">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="dhina@example.com" required />
+    </div>
+    <div class="fg">
+      <label>Message</label>
+      <textarea name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-fill fw">Send Message →</button>
+  </form>
       </div>
     </div>
   </section>
