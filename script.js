@@ -376,13 +376,35 @@ if (cForm) {
     e.preventDefault();
     const btn = cForm.querySelector('button[type="submit"]');
     const orig = btn.textContent;
-    btn.textContent = '✅ Message Sent!';
-    btn.style.background = 'linear-gradient(135deg,#00c851,#007e33)';
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.background = '';
-      cForm.reset();
-    }, 3000);
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(cForm)).toString(),
+    })
+      .then(response => {
+        if (response.ok) {
+          btn.textContent = '✅ Message Sent!';
+          btn.style.background = 'linear-gradient(135deg,#00c851,#007e33)';
+          cForm.reset();
+        } else {
+          btn.textContent = '❌ Submission Failed';
+          btn.style.background = 'linear-gradient(135deg,#d32f2f,#b71c1c)';
+        }
+      })
+      .catch(() => {
+        btn.textContent = '❌ Submission Error';
+        btn.style.background = 'linear-gradient(135deg,#d32f2f,#b71c1c)';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.textContent = orig;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
   });
 }
 
